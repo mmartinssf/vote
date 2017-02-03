@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>V.R.Toby</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item *ngFor="let slide of mockSlides" no-lines>
+      <ion-thumbnail>
+        <img src="{{slide.img}}" [navPush]="pushPage">
+      </ion-thumbnail>
+      <h2>Level {{slide.level}}</h2>
+      <h3>{{slide.completedNumber}}/{{slide.totalNumber}}</h3>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
